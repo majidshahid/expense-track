@@ -2,10 +2,15 @@
 import {useState} from "react";
 
 function Body(){
-  var [income,setincome]=useState("")
+  var [income,setincome]=useState()
   var [expense,setexpense]=useState("")
+  var [balance, setBalance]= useState(0)
   function Foo(){
-    console.log(income)
+   
+var a = +income + +balance
+setBalance(a)
+console.log(a)
+   
     
   }
     return (
@@ -23,7 +28,7 @@ function Body(){
             </div>
           </div>
           <div className="col-5">
-          <h1>Your Balance:<span>{+income}</span></h1>
+          <h1>Your Balance:<span>{balance}</span></h1>
           <h1></h1>
 <h1>Your Expense:<span>{expense}</span></h1>
 <h1></h1>
