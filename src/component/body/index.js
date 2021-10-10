@@ -10,7 +10,8 @@ function Body(){
   const[todo,settodo]=useState([])
 var addincome=()=>{
     var A= [...todo,];
-    A.push(val);
+    var b = `${val}: ${income}`
+    A.push(b);
     settodo(A)
     }
   var a =balance-xpencse;
@@ -18,13 +19,15 @@ var addincome=()=>{
   function Foo(){
     var a = +income + +balance;
     setbalance(a);
-    var A= [...todo,];
-    A.push(val);
-    var c =`${A} : ${a}`
-   console.log(c)
-    settodo(A)
+    addincome()
+  //   var A= [...todo,];
+  //   A.push(val);
+  //   var c =`${A} : ${a}`
+  //  console.log(c)
+  //   settodo(A)
 
     setincome("")
+    
    
   }
   function Expense(){
@@ -62,6 +65,7 @@ setexpense("")
 
 
 <div>
+  <h1>Source Of Income </h1>
 <ul>
 {todo.map((v,i)=>{
     return <li key ={i}>{v}</li>
