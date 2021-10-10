@@ -13,6 +13,7 @@ var addincome=()=>{
     var b = `${val}: ${income}`
     A.push(b);
     settodo(A)
+    setvalue('')
     }
   var a =balance-xpencse;
  
